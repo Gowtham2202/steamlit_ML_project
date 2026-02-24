@@ -523,7 +523,7 @@ with tab_scenarios:
 # ══════════════════════════════════════════════════════════════
 # TAB 4 — PROACTIVE DECISIONS
 # ══════════════════════════════════════════════════════════════
-with tab_decisions:
+with tab_decision:
     st.subheader("🧭 Feature 3: Proactive Supply Chain Decision Making")
     if st.session_state.result_df is None:
         no_data_warning()
@@ -626,5 +626,6 @@ with tab_inventory:
         with st.expander("📋 Full Inventory Table"):
 
             st.dataframe(inv_df, use_container_width=True)
+
 
 
