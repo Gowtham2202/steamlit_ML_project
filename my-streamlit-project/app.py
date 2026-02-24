@@ -326,7 +326,7 @@ tabs = st.tabs([
 # ══════════════════════════════════════════════════════════════
 # TAB 0 — UPLOAD & PREDICT
 # ══════════════════════════════════════════════════════════════
-with tabs[0]:
+with tab_upload:
     st.subheader("📂 Upload New Supply Chain CSV for Prediction")
     st.markdown("""
     <div style='background:#1e1e2f; padding:16px; border-radius:8px; border-left:4px solid #1a73e8; margin-bottom:12px;'>
@@ -449,7 +449,7 @@ with tabs[0]:
 # ══════════════════════════════════════════════════════════════
 # TAB 2 — CRITICAL RISK INDICATORS
 # ══════════════════════════════════════════════════════════════
-with tabs[1]:
+with tab_kri:
     st.subheader("⚠️ Feature 1: Critical Risk Indicators")
     if st.session_state.imp_df is None:
         no_data_warning()
@@ -490,7 +490,7 @@ with tabs[1]:
 # ══════════════════════════════════════════════════════════════
 # TAB 3 — DISRUPTION SCENARIOS
 # ══════════════════════════════════════════════════════════════
-with tabs[2]:
+with tab_scenarios:
     st.subheader("🎭 Feature 2: Disruption Scenario Simulation")
     if st.session_state.scenario_df is None:
         no_data_warning()
@@ -520,7 +520,7 @@ with tabs[2]:
 # ══════════════════════════════════════════════════════════════
 # TAB 4 — PROACTIVE DECISIONS
 # ══════════════════════════════════════════════════════════════
-with tabs[3]:
+with tab_decisions:
     st.subheader("🧭 Feature 3: Proactive Supply Chain Decision Making")
     if st.session_state.result_df is None:
         no_data_warning()
@@ -563,7 +563,7 @@ with tabs[3]:
 # ══════════════════════════════════════════════════════════════
 # TAB 5 — TRANSPORT DELAY RISK
 # ══════════════════════════════════════════════════════════════
-with tabs[4]:
+with tab_transport:
     st.subheader("🚚 Feature 4: Transportation Delay Risk")
     if st.session_state.transport_df is None:
         no_data_warning()
@@ -593,7 +593,7 @@ with tabs[4]:
 # ══════════════════════════════════════════════════════════════
 # TAB 6 — INVENTORY & BUFFER STOCK
 # ══════════════════════════════════════════════════════════════
-with tabs[5]:
+with tab_inventory:
     st.subheader("📦 Feature 5: Inventory Level & Buffer Stock")
     if st.session_state.inv_df is None:
         no_data_warning()
@@ -623,3 +623,4 @@ with tabs[5]:
         with st.expander("📋 Full Inventory Table"):
 
             st.dataframe(inv_df, use_container_width=True)
+
