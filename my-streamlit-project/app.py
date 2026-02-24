@@ -449,7 +449,7 @@ with tabs[0]:
 # ══════════════════════════════════════════════════════════════
 # TAB 2 — CRITICAL RISK INDICATORS
 # ══════════════════════════════════════════════════════════════
-with tabs[2]:
+with tabs[1]:
     st.subheader("⚠️ Feature 1: Critical Risk Indicators")
     if st.session_state.imp_df is None:
         no_data_warning()
@@ -490,7 +490,7 @@ with tabs[2]:
 # ══════════════════════════════════════════════════════════════
 # TAB 3 — DISRUPTION SCENARIOS
 # ══════════════════════════════════════════════════════════════
-with tabs[3]:
+with tabs[2]:
     st.subheader("🎭 Feature 2: Disruption Scenario Simulation")
     if st.session_state.scenario_df is None:
         no_data_warning()
@@ -520,7 +520,7 @@ with tabs[3]:
 # ══════════════════════════════════════════════════════════════
 # TAB 4 — PROACTIVE DECISIONS
 # ══════════════════════════════════════════════════════════════
-with tabs[4]:
+with tabs[3]:
     st.subheader("🧭 Feature 3: Proactive Supply Chain Decision Making")
     if st.session_state.result_df is None:
         no_data_warning()
@@ -563,7 +563,7 @@ with tabs[4]:
 # ══════════════════════════════════════════════════════════════
 # TAB 5 — TRANSPORT DELAY RISK
 # ══════════════════════════════════════════════════════════════
-with tabs[5]:
+with tabs[4]:
     st.subheader("🚚 Feature 4: Transportation Delay Risk")
     if st.session_state.transport_df is None:
         no_data_warning()
@@ -593,7 +593,7 @@ with tabs[5]:
 # ══════════════════════════════════════════════════════════════
 # TAB 6 — INVENTORY & BUFFER STOCK
 # ══════════════════════════════════════════════════════════════
-with tabs[6]:
+with tabs[5]:
     st.subheader("📦 Feature 5: Inventory Level & Buffer Stock")
     if st.session_state.inv_df is None:
         no_data_warning()
@@ -621,4 +621,5 @@ with tabs[6]:
         plot_stockout_risk_heatmap(inv_df)
 
         with st.expander("📋 Full Inventory Table"):
+
             st.dataframe(inv_df, use_container_width=True)
