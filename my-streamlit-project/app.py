@@ -443,9 +443,8 @@ with tab_upload:
                 st.markdown(f"**{i}.** {step}")
     else:
         st.markdown("""
-        <div style='text-align:center; padding:50px; background:#1e1e2f; border-radius:12px;'>
+        <div style='text-align:center; padding:16px; background:#1e1e2f; border-radius:12px;'>
             <h3>👆 Upload your new CSV above to get predictions</h3>
-            <p style='color:gray;'>The trained pickle model will instantly predict disruption risk for every record.</p>
         </div>
         """, unsafe_allow_html=True)
 
@@ -626,6 +625,7 @@ with tab_inventory:
         with st.expander("📋 Full Inventory Table"):
 
             st.dataframe(inv_df, use_container_width=True)
+
 
 
 
